@@ -8,7 +8,7 @@ import Experience from "./components/Experience";
 
 export default function App() {
   return (
-    <div className="font-sans scroll-smooth">
+    <div className="font-sans scroll-smooth bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300">
       <Navbar />
       <main>
         <Hero />

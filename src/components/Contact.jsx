@@ -1,11 +1,14 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 px-4 bg-white text-gray-800">
+    <section
+      id="contact"
+      className="py-16 px-4 bg-white text-gray-800 dark:bg-gray-900 dark:text-white"
+    >
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
-        <p className="text-gray-600 mb-10">
-          Feel to reach out to me for collaborations, project ideas, or just to
-          say hi. I'm Open to new Opportunities!
+        <p className="text-gray-600 dark:text-gray-300 mb-10">
+          Feel free to reach out to me for collaborations, project ideas, or
+          just to say hi. I'm open to new opportunities!
         </p>
 
         <form
@@ -16,45 +19,48 @@ export default function Contact() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >
               Name
             </label>
             <input
+              id="name" // ✅ Added id
               type="text"
               name="name"
               required
-              className="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="mt-1 w-full border border-gray-300 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
 
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >
               Email
             </label>
             <input
+              id="email" // ✅ Added id
               type="email"
               name="email"
               required
-              className="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="mt-1 w-full border border-gray-300 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
 
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >
               Message
             </label>
             <textarea
-              name="Message"
+              id="message" // ✅ Added id
+              name="message"
               rows="5"
               required
-              className="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="mt-1 w-full border border-gray-300 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
 
@@ -66,12 +72,12 @@ export default function Contact() {
           </button>
         </form>
 
-        <div className="mt-12 text-center space-y-2 text-gray-600">
+        <div className="mt-12 text-center space-y-2 text-gray-600 dark:text-gray-400">
           <p>
             Email:{" "}
             <a
-              href="mailto:danielwilliam491999.com"
-              className="text-blue-600 hover:underline"
+              href="mailto:danielwilliam491999@gmail.com"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               danielwilliam491999@gmail.com
             </a>
@@ -80,7 +86,7 @@ export default function Contact() {
             Phone:{" "}
             <a
               href="tel:+919650563886"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               +91 96505 63886
             </a>
@@ -91,7 +97,7 @@ export default function Contact() {
               href="https://github.com/dwilly8229"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               github.com/dwilly8229
             </a>
@@ -102,7 +108,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/william-daniel-975a74114/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               linkedin.com/in/williamdaniel0409
             </a>

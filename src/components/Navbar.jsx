@@ -1,8 +1,8 @@
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
@@ -15,27 +15,33 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 w-full z-50">
+    <nav className="bg-white dark:bg-gray-900 shadow-md fixed top-0 w-full z-50 text-gray-800 dark:text-white">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-blue-600 cursor-pointer">
+        <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400 cursor-pointer">
           William
         </h1>
 
-        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-8 items-center font-medium">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a href={link.href} className="hover:text-blue-600 transition">
+              <a
+                href={link.href}
+                className="hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >
                 {link.name}
               </a>
             </li>
           ))}
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
 
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
             aria-label="Toggle navigation menu"
-            className="text-gray-700 focus:outline-none"
+            className="text-gray-700 dark:text-white focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -63,18 +69,21 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <ul className="md:hidden bg-white px-4 pb-4 space-y-3 shadow-md">
+        <ul className="md:hidden bg-white dark:bg-gray-900 px-4 pb-4 space-y-3 shadow-md">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-700 font-medium hover:text-blue-600 transition"
+                className="block text-gray-700 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition"
               >
                 {link.name}
               </a>
             </li>
           ))}
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
       )}
     </nav>
