@@ -3,6 +3,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      blur: {
+        "3xl": "64px",
+      },
       colors: {
         dark: {
           DEFAULT: "#1f2937",
